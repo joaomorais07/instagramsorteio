@@ -1,0 +1,57 @@
+﻿*{
+margin:0
+}
+
+body{
+    background: linear-gradient(rgb(45, 6, 49), #56216e 60%, #871aa8);
+    margin: 0;
+	height: 100vh;
+    font-family: cursive;
+}  
+
+.titulo{
+    color: white;
+	height: 50px;
+	display: flex;
+    width: 100%;
+    min-width: 450px;
+    justify-content: space-between;
+    height: auto;
+}
+
+.wrap{
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.titulo ul{
+	display: table;
+    padding: 0;
+    width: -webkit-fill-available;
+}
+
+.titulo ul li{
+    flex: 1;
+	display: inline;
+    margin: 20px;
+}
+
+.links{
+    max-width: revert;
+    min-width: inherit;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.titulo a {
+	color: white;
+	font-family: cursive;
+	font-size: 25px;
+	font-weight: 650;
+	text-decoration: none;
+}
+
+.titulo img{
+    height: 100px;
+    width: 268px;
+}

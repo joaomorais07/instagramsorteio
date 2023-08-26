@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/estiloLogin.css')}}">
+</head>
+<body>
+    <div class="cabecalho">
+        <a href="/"><img src="{{url_for('static', filename='imagens/logo3.png')}}" alt="Logo"></a>
+    </div>
+        {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            <div>
+                {%for msg in mensagens: %}
+                    <h2 style="background-color:white; position: absolute;">{{msg}}</h2>
+                {% endfor %}
+            </div>
+        {% endif %}
+   
+
+    <div class="conteiner">
+        <div class="titulo">
+            <h3 id="h3Titulo">CRIE A SUA CONTA</h3>
+            <a href="/"><img src="{{url_for('static', filename='imagens/logo3.png')}}" alt="Logo"></a>
+        </div>
+        <div class="divFormulario">
+            <form class="formCadastro" action="/cadastrar" method="POST">
+                <div class="marginBotom">
+                    <label for="usuario" class="nomeInput">NOME DE USUARIO:</label><br>
+                    <input id="usuario" class="inputCadastro" type="text" name="nomeUsuario">
+                </div>
+                <div class="marginBotom">
+                    <label for="usuario" class="nomeInput">EMAIL:</label><br>
+                    <input id="usuario" class="inputCadastro" type="email" name="emailUsuario">
+                </div>
+                <div class="marginBotom">
+                    <label for="usuario" class="nomeInput">SENHA:</label><br>
+                    <input id="usuario" class="inputCadastro" type="password" name="senhaUsuario">
+                </div>
+                <label for="senha" class="nomeInput">CONFIRMAR SENHA:</label><br>
+                <input id="senha" class="inputCadastro" type="password" name="confirmarSenha"><br>
+
+                <div class="botoes">
+                    <button id="btnEntrar" type="submit">Cadastra-se</button>
+                </div>
+        
+            <div>
+                <a href="/login">Ja tenho cadastro</a><br>
+            </div>      
+            </form>
+        </div>
+    </div>
+
+    <div class="rodape">
+
+    </div>
+
+    
+</body>
+</html>
