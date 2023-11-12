@@ -1,6 +1,6 @@
 ﻿from src.controllers.controller import *
 from src.controllers.usuario_controller import *
-from src.controllers.rotas_controller import *
+from src.controllers.rota_controller import *
 
 
 app.add_url_rule('/cadastrar', view_func=cadastrarUsuario.as_view('cadastrar')),

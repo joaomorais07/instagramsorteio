@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="cabecalho">
-        <a href="/"><img src="{{url_for('static', filename='imagens/logo3.png')}}" alt="Logo"></a>
+        <a href="/"><img src="{{url_for('static', filename='image/logo3.png')}}" alt="Logo"></a>
     </div>
         {% set mensagens = get_flashed_messages() %}
         {% if mensagens %}
@@ -24,7 +24,7 @@
     <div class="conteiner">
         <div class="titulo">
             <h3 id="h3Titulo">CRIE A SUA CONTA</h3>
-            <a href="/"><img src="{{url_for('static', filename='imagens/logo3.png')}}" alt="Logo"></a>
+            <a href="/"><img src="{{url_for('static', filename='image/logo3.png')}}" alt="Logo"></a>
         </div>
         <div class="divFormulario">
             <form class="formCadastro" action="/cadastrar" method="POST">
