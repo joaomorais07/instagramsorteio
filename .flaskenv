@@ -1,3 +1,0 @@
-﻿FLASK_APP=instagramsorteio
-FLASK_DEBUG=True
-DATABASE_URL='pscale_pw_A2GtD4ahSdkGIGKmHikWmk1XrYGMm1MSkUXTdtKEfhZ'
