@@ -1,10 +1,14 @@
 ﻿import mysql.connector
 from mysql.connector import Error
+from src.app import app
+import os
+
+app.config['DATABASE_URL'] = os.getenv('DATABASE_URL')
 
 def mysqlconector():
     '''Takes no args, and returns a connection to MYDB via MYSQL.'''
     try:
-        conexao = mysql.connector.connect(user='gue31tbls9kid10b7yy8', password='pscale_pw_4R3cvCvoVFQA7vXseVyc4MysoP6CYUSkfmiSpNg6Hau', host='aws.connect.psdb.cloud', database='instagram_sorteio', port=3306)
+        conexao = mysql.connector.connect(user='42u64okntxjthawzpi5s', password=app.config['DATABASE_URL'], host='aws.connect.psdb.cloud', database='instagram_sorteio', port=3306)
     except mysql.connector.Error as err:
         if err.errno == mysql.connector.errorcode.ER_ACCESS_DENIED_ERROR:
             print("Something is wrong with your user name or password")
