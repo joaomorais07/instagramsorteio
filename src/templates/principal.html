@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/estilo.css')}}">
 </head>
 <body>
-    <h2>BEM VINDES PESSOAL</h2>
+    <div class="titulo wrap">
+        <img src="{{url_for('static', filename='image/logo3.png')}}" alt="Logo">
+        <div class="links">
+            <ul>
+                <li><a href="/cadastrar">Contato</a></li>
+                <li><a href="/cadastrar">Sobre</a></li>
+                <li><a style="color: rgb(255, 0, 0);" href="/desconectar">Desconetar</a></li>
+            </ul>
+        </div>
+    </div>
     
-    <a href="/desconectar">Desconetar</a>
     
 </body>
 </html>
